@@ -7,11 +7,12 @@ import math
 import scipy.io
 import argparse
 
+print(caffe.__file__)
 def parse_args():
 	parser = argparse.ArgumentParser(description='test face parsing')
 	parser.add_argument('--root_dir', type=str, default = "/Data/")
 	parser.add_argument('--model', type=str, default = 'models/state_iter_20000.caffemodel')
-	parser.add_argument('--device_id', type=int, default = 2)
+	parser.add_argument('--device_id', type=int, default = 0)
 	parser.add_argument('--proto', type=str, default = 'models/deploy.prototxt')
 
 	args = parser.parse_args()
